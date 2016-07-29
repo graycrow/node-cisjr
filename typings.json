@@ -1,0 +1,8 @@
+{
+  "globalDependencies": {
+    "ftp": "registry:dt/ftp#0.0.0+20160317120654",
+    "jszip": "registry:dt/jszip#0.0.0+20160709055933",
+    "mkdirp": "registry:dt/mkdirp#0.3.0+20160317120654",
+    "node": "registry:dt/node#6.0.0+20160720070758"
+  }
+}
