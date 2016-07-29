@@ -177,7 +177,7 @@ const unzipFiles = (zip) => {
         resolve(Promise.all(promises));
     });
 };
-getFileStat(localJdfPath).then(getJdf).then(unzipJdf).then(unzipFiles).then((lines) => {
+mkdir(localDataPath).then(() => localJdfPath).then(getFileStat).then(getJdf).then(unzipJdf).then(unzipFiles).then((lines) => {
     lines.filter((el) => !!el).forEach(el => {
         console.log(el);
     });
