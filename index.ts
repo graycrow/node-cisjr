@@ -4,15 +4,15 @@ import * as FtpClient from "ftp";
 import * as JSZip from "jszip";
 import * as mkdirp from "mkdirp";
 
-const cisjr = "ftp.cisjr.cz";
-//const cisjr = "10.0.1.138";
-const jdfPath = "JDF";
-const jdfFileName = "JDF.zip";
-const localDataPath = "data";
-const localJdfPath = path.join(localDataPath, jdfFileName);
-const remoteJdfPath = path.posix.join(jdfPath, jdfFileName);
-const linePrefix = "100";
-const myLines = ["103", "348", "368", "369", "514"];
+const cisjr: string = "ftp.cisjr.cz";
+// const cisjr = "10.0.1.138";
+const jdfPath: string = "JDF";
+const jdfFileName: string = "JDF.zip";
+const localDataPath: string = "data";
+const localJdfPath: string = path.join(localDataPath, jdfFileName);
+const remoteJdfPath: string = path.posix.join(jdfPath, jdfFileName);
+const linePrefix: string = "100";
+const myLines: string[] = ["103", "348", "368", "369", "514"];
 
 const mkdir = (dir: string): Promise<string> => {
     return new Promise((resolve, reject) => {
